@@ -4,9 +4,13 @@ public class Main {
     public static void main(String[] args) {
 //        bai1();
 //        bai2();
-        bai3();
+//        bai3();
 //        bai4();
-
+//        bai5();
+//        bai6();
+//        bai7();
+//        bai8();
+        bai9();
     }
 
     public static void bai1() {
@@ -59,4 +63,47 @@ public class Main {
         System.out.println(age);
 
     }
+
+    public static void bai5(){
+        Overloading ov = new Overloading();
+
+        ov.setName("Hạnh");
+        ov.setName();
+        System.out.println(ov.getName());
+    }
+
+    public static void bai6(){
+        Constructor con = new Constructor("peter",2000);
+        con.showInfo();
+
+    }
+    public static void bai7(){
+        ShowInfo si = new ShowInfo();
+        si.showInfo();
+
+        Inheritance in = new Inheritance();
+        in.setName("Hạnh");
+        in.showInfo();
+    }
+    public static void bai8(){
+        Overriding or = new Overriding();
+        or.showInfo();
+    }
+    public static void bai9(){
+        StaticMethodVaStaticProperty smvsp = new StaticMethodVaStaticProperty();
+//        StaticMethodVaStaticProperty smvsp1 = new StaticMethodVaStaticProperty();
+//        StaticMethodVaStaticProperty smvsp2 = new StaticMethodVaStaticProperty();
+//
+//        smvsp.showCount();
+//        smvsp1.showCount();
+//        smvsp2.showCount();
+//
+/*Khi biến count là biến static ta có thể truy cập trực tiếp vào biến count mà không cần khởi tạo đối tượng
+chỉ cần truy cập thông qua class. */
+        System.out.println(StaticMethodVaStaticProperty.count);
+
+// truy cập method static không cần khởi tạo đối tượng
+        StaticMethodVaStaticProperty.showCount();
+    }
+
 }
