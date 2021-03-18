@@ -21,6 +21,8 @@ và tùy thuộc vào loại mã hóa UTF-8 hay UTF-16 sẽ tạo ra 1byte 2byte
 public class File {
 
     public static void main(String[] args) {
+        String pathA = "file\\a";
+        String pathB = "file\\b.txt";
 //        CacPhuongThucCoBanInFileClass.exits();
 //        CacPhuongThucCoBanInFileClass.createNewFile();
 //        CacPhuongThucCoBanInFileClass.canRead();
@@ -32,7 +34,15 @@ public class File {
 //        CacPhuongThucCoBanInFileClass.lastModified();
 //        CacPhuongThucCoBanInFileClass.length();
 //        CacPhuongThucCoBanInFileClass.listFile();
-//        RandomAccessFile.writeFile();
+        RandomAccessFile.writeFile();
         RandomAccessFile.readInt();
+        FileInputStreamAndFileOutputStream.writeFile("Test");
+        FileInputStreamAndFileOutputStream.readFile("Test1");
+        FileInputStreamAndFileOutputStream.copyFile(pathA,pathB);
+        FileReaderAndFileWriter.fileWriter("Text");
+        FileReaderAndFileWriter.fileReader();
+        BufferedAndPrintWriter.writerLine("Java");
+        BufferedAndPrintWriter.readLine();
+
     }
 }

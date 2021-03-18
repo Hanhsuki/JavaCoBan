@@ -7,17 +7,9 @@ import java.io.IOException;
 /* Tác dụng của Random Access File
 1. Dùng để truy xuất ngẫu nhiên, Duy chuyển đến 1 vị trí bất kỳ trong 1 tập tin.
 2. Đọc và ghi dữ liệu theo kiểu nguyên thủy
-3.
+Chú ý: Ghi vào theo kiểu gì thì cần đọc ra theo kiểu dữ liệu đó
 */
 public class RandomAccessFile {
-    public static void seek() {
-        java.io.File file = new java.io.File(".\\file\\text.docx");
-
-    }
-
-    public static void readUTF() {
-
-    }
 
     public static void readInt() {
         try {
@@ -37,10 +29,6 @@ public class RandomAccessFile {
 
     }
 
-    public static void length() {
-
-    }
-
     /* Có 2 method RandomAccessFile 1 là truyền vào path của file hai là truyền vào name của file
     Mode nếu truyền vào r là chỉ đọc, rw là cả đọc và ghi.
     */
@@ -48,7 +36,8 @@ public class RandomAccessFile {
         java.io.RandomAccessFile randomAccessFile = null;
         try {
             randomAccessFile = new java.io.RandomAccessFile(".\\file\\text1.txt", "rw");
-            randomAccessFile.write(123);
+            randomAccessFile.writeInt(123);
+            randomAccessFile.writeUTF("Random"); // ghi vào chuỗi dữ liệu
 
             randomAccessFile.close(); // Khi thao tác xong cần đống file lại
 
@@ -65,4 +54,3 @@ public class RandomAccessFile {
 }
 
 
-//myPrint truyền vào 1 string mà randomAccessFile.readInt() trả về Int, nên chúng ta cần nối thêm 1 chuỗi rống
