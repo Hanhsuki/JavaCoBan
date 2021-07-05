@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static chuong4.StaticMethodVaStaticProperty.count;
+
 public class Sapxep {
 
     public static void main(String[] args) {
@@ -33,18 +35,22 @@ public class Sapxep {
 
 // Kiểm tra số lần xuất hiện của một phần tử trong mảng
     public static void bai2() {
+        int count = 0;
         int[] arr = {10, 50, 60, 10, 20, 10};
-        Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        Map<Integer, Integer> map = new TreeMap<Integer, Integer>(); //sắp xếp các giá trị của mảng
         for (int i = 0; i < arr.length; i++) {
             if (map.containsKey(arr[i])) {
-                int count = map.get(arr[i]) + 1;
+                count = map.get(arr[i]) + 1;
                 map.put(arr[i], count);
             } else {
                 map.put(arr[i], 1);
             }
         }
         Iterator itr = map.keySet().iterator();
-        while (itr.hasNext())
-        System.out.println("Giá trị: " + itr.next() + " xuất hiện số lần: " + map.get(itr.next()));
+        while (itr.hasNext()){
+            Object key = itr.next();
+            System.out.println("Giá trị: " + key + " xuất hiện số lần: " + map.get(key));
+        }
+
     }
 }
