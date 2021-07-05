@@ -32,7 +32,7 @@ public class File {
 //        CacPhuongThucCoBanInFileClass.lastModified();
 //        CacPhuongThucCoBanInFileClass.length();
 //        CacPhuongThucCoBanInFileClass.listFile();
-//        RandomAccessFile.writeFile();
+        RandomAccessFile.writeFile();
         RandomAccessFile.readInt();
     }
 }

@@ -23,7 +23,7 @@ public class RandomAccessFile {
         try {
             java.io.RandomAccessFile randomAccessFile = new java.io.RandomAccessFile(".\\file\\text1.txt", "r");
             randomAccessFile.seek(0);
-
+//myPrint truyền vào 1 string mà randomAccessFile.readInt() trả về Int, nên chúng ta cần nối thêm 1 chuỗi rống
             myPrint(randomAccessFile.readInt() + "");
             randomAccessFile.close();
 
@@ -48,7 +48,7 @@ public class RandomAccessFile {
         java.io.RandomAccessFile randomAccessFile = null;
         try {
             randomAccessFile = new java.io.RandomAccessFile(".\\file\\text1.txt", "rw");
-            randomAccessFile.write(123);
+            randomAccessFile.writeInt(96);
 
             randomAccessFile.close(); // Khi thao tác xong cần đống file lại
 
@@ -65,4 +65,3 @@ public class RandomAccessFile {
 }
 
 
-//myPrint truyền vào 1 string mà randomAccessFile.readInt() trả về Int, nên chúng ta cần nối thêm 1 chuỗi rống
